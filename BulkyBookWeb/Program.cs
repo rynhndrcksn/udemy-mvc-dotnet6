@@ -2,6 +2,8 @@
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Since .net6 Hot Reload isn't working on Visual Studio for Mac 2022 Preview, we add Razor runtime compilation...
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 
